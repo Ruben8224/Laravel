@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo|Landing</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <!-- Fontawesome Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-</head>
-
+@extends('layouts/plantilla')
+@asset('content')
 <body>
+<link rel="stylesheet" href="{!! asset('css/estilos.css') !!}">
     <header>
         <nav class="navbar">
             <h2 class="logo"><a href="/img/pawel-kadysz-CuFYW1c97w8-unsplash.jpg">LOGO</a></h2>
@@ -26,10 +16,10 @@
             </label>
 
             <ul class="all-links">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/pc/pc.html">PC</a></li>
-                <li><a href="/ps/ps.html">PS</a></li>
-                <li><a href="/psp/psp.html">PSP</a></li>
+                <li><a href="{{ url('/home') }}">Home</a></li>
+                <li><a href="{{ url('/pc') }}">PC</a></li>
+                <li><a href="{{ url('/ps') }}">PS</a></li>
+                <li><a href="{{ url('/psp') }}">PSP</a></li>
             </ul>
 
         </nav>
@@ -41,9 +31,10 @@
                 <h1> Videojuegos</h1>
                 <p>EXPLORAR POR CATEGORÍA</p>
             </div>
-            <a href="/pc/pc.html">PC.</a>
-            <a href="/ps/ps.html">PS</a>
-            <a href="/psp/psp.html">PSP</a>
+                <a href="{{ url('/home') }}">Home</a>
+                <a href="{{ url('/pc.blade.php') }}">PC</a>
+                <a href="{{ url('/ps.blade.php') }}">PS</a>
+                <a href="{{ url('/psp.blade.php') }}">PSP</a>
         </div>
     </section>
 
